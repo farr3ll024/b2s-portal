@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import config from "./config.json";
 
 function App() {
   const [recipientEmail, setRecipientEmail] = useState("");
@@ -10,7 +11,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://localhost:7271/api/emails/send", {
+      await axios.post(`${config.API_BASE_URL}/api/emails/send`, {
         recipientEmail,
         subject,
         plainTextContent,
