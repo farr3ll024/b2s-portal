@@ -25,7 +25,7 @@ const SendEmailView = () => {
 
     return (
         <div>
-            <h1>Send Email</h1>
+            <h1>Send Email or don't!</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="email"
