@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import config from "./../config.json";
+import config from "../../config.json";
 
 const SendEmailView = () => {
     const [recipientEmail, setRecipientEmail] = useState("");
