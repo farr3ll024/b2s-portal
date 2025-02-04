@@ -7,7 +7,7 @@ const features = [{
     name: "Emails",
     path: '/email',
     description: 'Email sending service used to test monthly messages.'
-}, {name: "Valentine", path: '/valentine', description: 'A special message for 2/14/25.'}, {
+}, {name: "Valentine", path: '/valentine', description: '❤️ A special message for 2/14/25.'}, {
     name: "TBD",
     path: '/',
     description: 'tbd...'
