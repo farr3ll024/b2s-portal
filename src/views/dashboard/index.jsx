@@ -1,19 +1,21 @@
 import React from "react";
-import {AppBar, Toolbar, Typography, Button, Container, Box, Grid, Card, CardContent} from "@mui/material";
+import {Link as RouterLink} from 'react-router';
+import {Typography, Button, Container, Box, Grid, Card, CardContent, Link} from "@mui/material";
+import Page from "../Page/Page";
+
+const features = [{
+    name: "Emails",
+    path: '/email',
+    description: 'Email sending service used to test monthly messages.'
+}, {name: "Valentine", path: '/valentine', description: 'A special message for 2/14/25.'}, {
+    name: "TBD",
+    path: '/',
+    description: 'tbd...'
+}];
 
 const HomePage = () => {
     return (
-        <>
-            {/* Navbar */}
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="h6" sx={{flexGrow: 1}}>
-                        My App
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
-
+        <Page>
             {/* Hero Section */}
             <Box
                 sx={{
@@ -24,10 +26,10 @@ const HomePage = () => {
             >
                 <Container>
                     <Typography variant="h2" gutterBottom>
-                        Welcome to My App
+                        Welcome to B2S
                     </Typography>
                     <Typography variant="h6" color="textSecondary">
-                        Build amazing experiences with Material UI
+                        Bing bop boom bop bing bop bam
                     </Typography>
                     <Button variant="contained" color="primary" sx={{mt: 2}}>
                         Get Started
@@ -38,19 +40,21 @@ const HomePage = () => {
             {/* Features Section */}
             <Container sx={{py: 6}}>
                 <Grid container spacing={4}>
-                    {["Feature 1", "Feature 2", "Feature 3"].map((feature, index) => (
+                    {features.map((feature, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
                             <Card>
                                 <CardContent>
-                                    <Typography variant="h5">{feature}</Typography>
-                                    <Typography color="textSecondary">Description of {feature} goes here.</Typography>
+                                    <Link component={RouterLink} to={feature.path}>
+                                        <Typography variant="h5">{feature.name}</Typography>
+                                    </Link>
+                                    <Typography color="textSecondary">{feature.description}</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
                     ))}
                 </Grid>
             </Container>
-        </>
+        </Page>
     );
 };
 

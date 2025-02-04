@@ -1,16 +1,6 @@
 import React from "react";
-import SendEmailView from "./views/email/SendEmailView";
-import HomePage from "./views/dashboard";
+import AppRoutes from "./Routes";
 
-function App() {
-    return (
-        <>
-            <HomePage/>
-            <span style={{display: 'none'}}>
-                <SendEmailView/>
-          </span>
-        </>
-    );
-}
+const App = () => <AppRoutes/>;
 
 export default App;

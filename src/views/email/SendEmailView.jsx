@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import config from "../../config.json";
+import Page from "../Page/Page";
+import {Box} from '@mui/material';
 
 const SendEmailView = () => {
     const [recipientEmail, setRecipientEmail] = useState("");
@@ -24,7 +26,14 @@ const SendEmailView = () => {
     };
 
     return (
-        <div>
+        <Page>
+            <Box
+                sx={{
+                    py: 10,
+                    textAlign: "center",
+                }}
+            >
+
             <h1>Send Email or don't!</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -34,6 +43,8 @@ const SendEmailView = () => {
                     onChange={(e) => setRecipientEmail(e.target.value)}
                     required
                 />
+                <br />
+                <br />
                 <input
                     type="text"
                     placeholder="Subject"
@@ -41,20 +52,27 @@ const SendEmailView = () => {
                     onChange={(e) => setSubject(e.target.value)}
                     required
                 />
+                <br />
+                <br />
                 <textarea
                     placeholder="Plain Text Content"
                     value={plainTextContent}
                     onChange={(e) => setPlainTextContent(e.target.value)}
                     required
                 />
+                <br />
+                <br />
                 <textarea
                     placeholder="HTML Content"
                     value={htmlContent}
                     onChange={(e) => setHtmlContent(e.target.value)}
                 />
+                <br />
+                <br />
                 <button type="submit">Send Email</button>
             </form>
-        </div>
+            </Box>
+        </Page>
     );
 }
 
