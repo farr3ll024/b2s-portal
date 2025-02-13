@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography, Button, Box} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import {keyframes} from "@emotion/react";
 import Page from '../Page/Page'
@@ -22,7 +22,7 @@ const ValentinePage = () => {
         <Page>
             <Box
                 sx={{
-                    height: "100vh",
+                    height: "90vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -49,23 +49,23 @@ const ValentinePage = () => {
                 <Typography variant="h3" fontWeight="bold" sx={{color: 'black'}}>
                     Happy Valentine’s Day, My Love! ❤️
                 </Typography>
-                <Typography variant="h5" sx={{mt: 2, maxWidth: "600px", color: 'black'}}>
+                <Typography variant="h5" sx={{mt: 2, mb: 2, maxWidth: "600px", color: 'black'}}>
                     Every moment with you is like a dream come true. You are my happiness, my love, and my forever.
                     I’m so grateful to have you in my life. Today is just another reminder of how much I adore you.
                 </Typography>
 
-                {/*<iframe style="border-radius:12px"*/}
-                {/*        src="https://open.spotify.com/embed/playlist/2erzjJXa7OkCwWwrvuYsuA?utm_source=generator"*/}
-                {/*        width="100%" height="352" frameBorder="0" allowFullScreen=""*/}
-                {/*        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"*/}
-                {/*        loading="lazy"></iframe>*/}
+                <iframe title="vday-spotify-playlist" style={{borderRadius: "12px", maxWidth: "1200px"}}
+                        src="https://open.spotify.com/embed/playlist/2erzjJXa7OkCwWwrvuYsuA?utm_source=generator"
+                        width="100%" height="352" allowFullScreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"/>
 
                 {/* Surprise Button */}
                 <Button
                     variant="contained"
                     color="error"
                     size="large"
-                    sx={{mt: 4}}
+                    sx={{mt: 4, display: 'none'}}
                     href="https://open.spotify.com/playlist/2erzjJXa7OkCwWwrvuYsuA?si=05b9d11e466b4b4a"
                     target="_blank"
                     startIcon={<FavoriteIcon/>}
