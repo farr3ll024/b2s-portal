@@ -46,7 +46,7 @@ const ValentinePage = () => {
                 />
 
                 {/* Love Message */}
-                <Typography variant="h3" fontWeight="bold" sx={{ color: 'black' }}>
+                <Typography variant="h3" fontWeight="bold" sx={{color: 'black'}}>
                     Happy Valentine’s Day, My Love! ❤️
                 </Typography>
                 <Typography variant="h5" sx={{mt: 2, maxWidth: "600px", color: 'black'}}>
@@ -54,13 +54,19 @@ const ValentinePage = () => {
                     I’m so grateful to have you in my life. Today is just another reminder of how much I adore you.
                 </Typography>
 
+                {/*<iframe style="border-radius:12px"*/}
+                {/*        src="https://open.spotify.com/embed/playlist/2erzjJXa7OkCwWwrvuYsuA?utm_source=generator"*/}
+                {/*        width="100%" height="352" frameBorder="0" allowFullScreen=""*/}
+                {/*        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"*/}
+                {/*        loading="lazy"></iframe>*/}
+
                 {/* Surprise Button */}
                 <Button
                     variant="contained"
                     color="error"
                     size="large"
                     sx={{mt: 4}}
-                    href="https://open.spotify.com/playlist/37i9dQZF1DXc6IFF23C9jj"
+                    href="https://open.spotify.com/playlist/2erzjJXa7OkCwWwrvuYsuA?si=05b9d11e466b4b4a"
                     target="_blank"
                     startIcon={<FavoriteIcon/>}
                 >
