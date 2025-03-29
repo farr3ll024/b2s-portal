@@ -1,13 +1,13 @@
 import React from "react";
 import {Link as RouterLink} from 'react-router';
-import {Typography, Button, Container, Box, Grid, Card, CardContent, Link} from "@mui/material";
-import Page from "../Page/Page";
+import {Typography, Container, Box, Grid, Card, CardContent, Link} from "@mui/material";
+import Page from "../../components/Page/Page";
 
 const features = [{
     name: "Emails",
     path: '/email',
     description: 'Email sending service used to test monthly messages.'
-}, {name: "Valentine", path: '/valentine', description: '❤️ A special message for 2/14/25.'}, {
+}, {name: "Valentine", path: '/valentine', description: 'A special message for 2/14/25.'}, {
     name: "TBD",
     path: '/',
     description: 'tbd...'
@@ -31,9 +31,6 @@ const HomePage = () => {
                     <Typography variant="h6" color="textSecondary">
                         Bing bop boom bop bing bop bam
                     </Typography>
-                    <Button variant="contained" color="primary" sx={{mt: 2}}>
-                        Get Started
-                    </Button>
                 </Container>
             </Box>
 

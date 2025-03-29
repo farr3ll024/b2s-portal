@@ -2,7 +2,7 @@ import React from "react";
 import {Typography, Button, Box} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import {keyframes} from "@emotion/react";
-import Page from '../Page/Page'
+import Page from '../../components/Page/Page'
 
 // Heartbeat animation
 const heartbeat = keyframes`

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import config from "../../config.json";
-import Page from "../Page/Page";
+import Page from "../../components/Page/Page";
 import {Box} from '@mui/material';
 
 const SendEmailView = () => {
