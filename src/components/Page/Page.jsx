@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router';
-import {AppBar, Link, Toolbar, Typography} from "@mui/material";
+import {Link as RouterLink} from 'react-router';
+import {AppBar, Button, Link, Toolbar, Typography} from "@mui/material";
 
 const Page = ({children}) => {
     return (<>
@@ -10,6 +10,7 @@ const Page = ({children}) => {
                 <Link component={RouterLink} to="/" sx={{ flexGrow: 1, color: "white", textDecoration: "none" }}>
                     <Typography variant="h6">B2S</Typography>
                 </Link>
+                <Button color="inherit" sx={{display: 'none'}}>Login</Button>
             </Toolbar>
         </AppBar>
         {children}
